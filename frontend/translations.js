@@ -42,7 +42,8 @@ const translations = {
         provider: "Fournisseur",
         task: "Tâche détectée",
         quota: "Quota utilisé",
-        thinking: "Réflexion en cours..."
+        thinking: "Réflexion en cours...",
+        autoMode: "🤖 Auto (Smart Router)"
     },
     en: {
         title: "AI Multi-Agents",
@@ -84,6 +85,7 @@ const translations = {
         provider: "Provider",
         task: "Detected Task",
         quota: "Quota Used",
-        thinking: "Thinking..."
+        thinking: "Thinking...",
+        autoMode: "🤖 Auto (Smart Router)"
     }
 };

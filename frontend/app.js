@@ -141,6 +141,12 @@ function updateTexts() {
         // Re-bind the element reference as we replaced innerHTML
         elements.availableModels = document.getElementById('available-models');
     }
+
+    // Model Select Default Option
+    const modelSelect = document.getElementById('model-select');
+    if (modelSelect && modelSelect.options.length > 0) {
+        modelSelect.options[0].text = t.autoMode;
+    }
 }
 
 function updateCharCount() {
@@ -216,7 +222,8 @@ async function handleGenerate() {
                 enable_data_guard: elements.dataGuardToggle.checked,
                 images: images,
                 history: chatHistory,
-                language: currentLang
+                language: currentLang,
+                model_id: document.getElementById('model-select').value || null
             })
         });
 
@@ -260,6 +267,32 @@ async function loadQuotaStatus() {
             if (elements.quotaStatus) {
                 const t = translations[currentLang];
                 elements.quotaStatus.textContent = t.quotaAvailable.replace('{count}', available.length);
+            }
+
+            // Populate Dropdown
+            const modelSelect = document.getElementById('model-select');
+            if (modelSelect) {
+                const currentVal = modelSelect.value;
+                // Keep the first option (Auto)
+                while (modelSelect.options.length > 1) {
+                    modelSelect.remove(1);
+                }
+
+                available.forEach(modelId => {
+                    const option = document.createElement('option');
+                    option.value = modelId;
+                    // Format nice name: "groq/llama-3" -> "Llama 3 (Groq)"
+                    const parts = modelId.split('/');
+                    const provider = parts[0];
+                    const name = parts.length > 1 ? parts.slice(1).join('/') : modelId;
+                    option.text = `${providerIcons[provider] || ''} ${name}`;
+                    modelSelect.add(option);
+                });
+
+                // Restore selection if still available
+                if (available.includes(currentVal)) {
+                    modelSelect.value = currentVal;
+                }
             }
         }
     } catch (e) { console.error(e); }
