@@ -257,7 +257,10 @@ async function loadQuotaStatus() {
         if (response.ok) {
             const available = await response.json();
             if (elements.availableModels) elements.availableModels.textContent = available.length;
-            if (elements.quotaStatus) elements.quotaStatus.textContent = `${available.length} quotas dispos`;
+            if (elements.quotaStatus) {
+                const t = translations[currentLang];
+                elements.quotaStatus.textContent = t.quotaAvailable.replace('{count}', available.length);
+            }
         }
     } catch (e) { console.error(e); }
 }
