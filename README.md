@@ -1,3 +1,13 @@
+---
+title: AI Website
+emoji: 🧠
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+license: mit
+---
+
 # 🧠 AI Générative Multi-Agents
 
 Une plateforme web intelligente qui utilise une architecture multi-agents pour optimiser vos interactions avec les Grands Modèles de Langage (LLMs). Le système sélectionne automatiquement le meilleur modèle pour votre tâche, sécurise vos données et améliore vos prompts.
