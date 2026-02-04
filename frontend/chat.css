@@ -254,7 +254,7 @@
 
 #prompt-input {
     flex: 1;
-    min-height: 24px;
+    min-height: 56px;
     max-height: 150px;
     background: transparent;
     border: none;
