@@ -4,8 +4,12 @@ FROM python:3.11-slim
 # Définir le répertoire de travail
 WORKDIR /app
 
-# Créer un utilisateur non-root pour la sécurité (recommandé pour HF Spaces)
+# Créer un utilisateur non-root pour la sécurité
 RUN useradd -m -u 1000 user
+
+# Donner les permissions à l'utilisateur sur le dossier de travail
+RUN chown user:user /app
+
 USER user
 ENV PATH="/home/user/.local/bin:$PATH"
 
