@@ -63,3 +63,15 @@ Si vous avez Docker installé sur votre ordinateur :
    ```
 
 3. Ouvrez `http://localhost:7860` dans votre navigateur.
+
+## 🌍 Accéder à votre Site
+
+Une fois le déploiement terminé sur Hugging Face Spaces (Statut **Running**), vous avez deux façons d'accéder à votre site :
+
+1.  **Via l'interface Hugging Face** :
+    Allez sur l'onglet **App** de votre Space : `https://huggingface.co/spaces/PouliotAlexis/AlexIs`
+
+2.  **Via le Lien Direct (Plein Écran)** :
+    Votre site est accessible directement à cette adresse :
+    👉 **[https://pouliotalexis-alexis.hf.space](https://pouliotalexis-alexis.hf.space)**
+
