@@ -346,7 +346,7 @@ function addThinkingMessage() {
     <div class="message-bubble">
         <div class="message-content">
             <span class="dot-typing"></span>
-            <em>Réflexion en cours...</em>
+            <em>${translations[currentLang].thinking}</em>
         </div>
     </div>`;
 

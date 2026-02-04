@@ -41,7 +41,8 @@ const translations = {
         // Models
         provider: "Fournisseur",
         task: "Tâche détectée",
-        quota: "Quota utilisé"
+        quota: "Quota utilisé",
+        thinking: "Réflexion en cours..."
     },
     en: {
         title: "AI Multi-Agents",
@@ -82,6 +83,7 @@ const translations = {
         // Models
         provider: "Provider",
         task: "Detected Task",
-        quota: "Quota Used"
+        quota: "Quota Used",
+        thinking: "Thinking..."
     }
 };
