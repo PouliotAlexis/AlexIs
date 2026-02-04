@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Générative Multi-Agents</title>
+    <meta name="description"
+        content="Plateforme d'IA générative intelligente avec sélection automatique du meilleur modèle">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/chat.css">
+    <script src="/static/translations.js"></script>
+    <script src="/static/app.js" defer></script>
+</head>
+
+<body>
+    <div class="lang-selector">
+        <select id="lang-select">
+            <option value="fr">🇫🇷 FR</option>
+            <option value="en">🇬🇧 EN</option>
+        </select>
+    </div>
+    <div class="background-effects">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🤖</span>
+                <h1>AI Multi-Agents</h1>
+            </div>
+            <p class="tagline">Sélection intelligente • Optimisation automatique • Protection des données</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content chat-layout">
+            <!-- Chat Container -->
+            <div id="chat-container" class="chat-container">
+                <div class="welcome-message glass-card">
+                    <h2>👋 Bienvenue !</h2>
+                    <p>Je suis votre assistant multi-agents. Posez-moi une question, je choisirai le meilleur modèle
+                        pour y répondre (Groq, Gemini, Claude, etc.).</p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="icon">🚀</span>
+                            <span>Rapide & Efficace</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">🛡️</span>
+                            <span>Protection Data Guard</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">🧠</span>
+                            <span>Multi-Modèles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Section (Sticky Bottom) -->
+            <section class="input-section glass-card">
+                <div class="input-controls">
+                    <div class="options-row">
+                        <label class="toggle-option compact">
+                            <input type="checkbox" id="optimize-toggle" checked>
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-label">Optimiser</span>
+                        </label>
+                        <label class="toggle-option compact">
+                            <input type="checkbox" id="data-guard-toggle" checked>
+                            <span class="toggle-slider property-shield"></span>
+                            <span class="toggle-label">Data Guard</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <!-- File Upload Trigger -->
+                    <div class="file-upload-mini" id="file-drop-zone">
+                        <input type="file" id="file-input" multiple
+                            accept=".txt,.md,.py,.js,.json,.csv,.html,.css,.xml,.yaml,.yml,.log,.sql,.java,.cpp,.c,.h,.ts,.jsx,.tsx,.sh,.bat,.png,.jpg,.jpeg,.gif,.webp">
+                        <button class="attach-btn" title="Ajouter des fichiers">
+                            📎
+                        </button>
+                    </div>
+
+                    <textarea id="prompt-input" placeholder="Posez votre question..." rows="1"></textarea>
+
+                    <button id="generate-btn" class="send-button">
+                        <span class="btn-icon">➤</span>
+                        <div class="btn-loader"></div>
+                    </button>
+                </div>
+
+                <div class="file-list-mini" id="file-list"></div>
+
+                <div class="char-counter-mini">
+                    <span id="char-count">0</span> / 10,000
+                </div>
+
+                <!-- Hidden template for errors/warnings overlay or toast if needed -->
+                <div id="error-section" class="error-toast hidden">
+                    <span class="error-icon">⚠️</span>
+                    <span id="error-message"></span>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="quota-info">
+                <span>📊</span>
+                <span id="quota-status">Chargement des quotas...</span>
+            </div>
+            <p class="footer-text" data-count-placeholder="{count}">Propulsé par 6 fournisseurs AI • <span
+                    id="available-models">-</span> modèles disponibles</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
