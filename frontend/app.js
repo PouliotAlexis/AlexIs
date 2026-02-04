@@ -100,19 +100,47 @@ function initApp() {
 function updateTexts() {
     const t = translations[currentLang];
 
+    // Page Title
+    document.title = t.title || "AI Multi-Agents";
+
+    // Header
+    const tagline = document.querySelector('.tagline');
+    if (tagline) tagline.textContent = t.tagline;
+
     // Placeholder
-    elements.promptInput.placeholder = t.placeholder || "Posez votre question...";
+    elements.promptInput.placeholder = t.placeholder;
 
     // Toggles
     const optimizeLabel = elements.optimizeToggle.parentElement.querySelector('.toggle-label');
-    if (optimizeLabel) optimizeLabel.textContent = t.optimizeLabel || "Optimiser";
+    if (optimizeLabel) optimizeLabel.textContent = t.optimizeLabel;
 
     const dataGuardLabel = elements.dataGuardToggle.parentElement.querySelector('.toggle-label');
-    if (dataGuardLabel) dataGuardLabel.textContent = t.dataGuardLabel || "Data Guard";
+    if (dataGuardLabel) dataGuardLabel.textContent = t.dataGuardLabel;
 
-    // Update Welcome Message if visible (first load)
+    // Welcome Message
     const welcomeH2 = document.querySelector('.welcome-message h2');
-    if (welcomeH2 && t.welcomeTitle) welcomeH2.textContent = t.welcomeTitle;
+    if (welcomeH2) welcomeH2.textContent = t.welcomeTitle;
+
+    const welcomeP = document.querySelector('.welcome-message p');
+    if (welcomeP) welcomeP.textContent = t.welcomeDesc;
+
+    // Features
+    const features = document.querySelectorAll('.feature-item span:last-child');
+    if (features.length >= 3) {
+        features[0].textContent = t.featureSpeed;
+        features[1].textContent = t.featureGuard;
+        features[2].textContent = t.featureMulti;
+    }
+
+    // Footer
+    const footerText = document.querySelector('.footer-text');
+    if (footerText && elements.availableModels) {
+        // Preserve the count if it exists
+        const count = elements.availableModels.textContent;
+        footerText.innerHTML = t.footer.replace('{count}', `<span id="available-models">${count}</span>`);
+        // Re-bind the element reference as we replaced innerHTML
+        elements.availableModels = document.getElementById('available-models');
+    }
 }
 
 function updateCharCount() {
