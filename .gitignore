@@ -24,3 +24,7 @@ data/quotas.json
 # OS
 .DS_Store
 Thumbs.db
+
+# Tests
+test_*.py
+tests_*.py
