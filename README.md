@@ -6,6 +6,7 @@ colorTo: indigo
 sdk: docker
 pinned: false
 license: mit
+login_required: true
 ---
 
 # 🧠 AI Générative Multi-Agents
