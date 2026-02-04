@@ -99,13 +99,13 @@ MODELS_CATALOG: Dict[str, dict] = {
         "speed": "very_fast",
     },
     # === HUGGINGFACE ===
-    "huggingface/meta-llama/Llama-3.2-3B-Instruct": {
+    "huggingface/microsoft/Phi-3-mini-4k-instruct": {
         "provider": "huggingface",
-        "name": "Llama 3.2 3B",
-        "strengths": ["quick", "light"],
+        "name": "Phi-3 Mini",
+        "strengths": ["quick", "light", "code"],
         "hourly_limit": 300,
-        "daily_limit": 7200,  # Estimé 300 * 24
-        "context_length": 8192,
+        "daily_limit": 7200,
+        "context_length": 4096,
         "speed": "very_fast",
     },
     # === COHERE ===
