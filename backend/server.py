@@ -187,6 +187,13 @@ async def generate(request: GenerateRequest):
     4. Génère la réponse (avec historique)
     """
     try:
+        # DEBUG LOG
+        import datetime
+
+        print(
+            f"[{datetime.datetime.now().time()}] 📥 REQUÊTE REÇUE | Optimize: {request.optimize_prompt} | Model: {request.model_id}"
+        )
+
         # === 1. Data Guard ===
         safe_prompt = request.prompt
         data_guard_info = DataGuardInfo(

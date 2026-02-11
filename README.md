@@ -5,7 +5,7 @@ colorFrom: blue
 colorTo: indigo
 sdk: docker
 pinned: false
-license: mit
+pinned: false
 ---
 
 # 🧠 AI Générative Multi-Agents
@@ -84,6 +84,3 @@ Le système repose sur un pipeline de 4 agents spécialisés :
 - **IA** : Intégration de multiples providers (Groq, Google Gemini, OpenRouter, HuggingFace, Cloudflare)
 - **Outils** : Uvicorn, Python-Dotenv
 
-## 📄 Licence
-
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.

@@ -179,6 +179,13 @@ class GeminiClient(BaseAIClient):
         model_name = model_id.replace("gemini/", "")
         images = kwargs.get("images", [])
 
+        # DEBUG LOG
+        import datetime
+
+        print(
+            f"[{datetime.datetime.now().time()}] 🚀 APPEL GEMINI (Model: {model_name}) | Prompt len: {len(prompt)} chars"
+        )
+
         try:
             import google.generativeai as genai
             import base64
