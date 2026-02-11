@@ -12,7 +12,7 @@ pinned: false
 
 Une plateforme web intelligente qui utilise une architecture multi-agents pour optimiser vos interactions avec les Grands Modèles de Langage (LLMs). Le système sélectionne automatiquement le meilleur modèle pour votre tâche, sécurise vos données et améliore vos prompts.
 
-![AI WebSite Screenshot](https://via.placeholder.com/800x400?text=Interface+Utilisateur+AI+Multi-Agents)
+![AI WebSite Screenshot](frontend/assets/banner.png)
 
 ## ✨ Fonctionnalités Clés
 
