@@ -12,7 +12,9 @@ pinned: false
 
 Une plateforme web intelligente qui utilise une architecture multi-agents pour optimiser vos interactions avec les Grands Modèles de Langage (LLMs). Le système sélectionne automatiquement le meilleur modèle pour votre tâche, sécurise vos données et améliore vos prompts.
 
-![AI WebSite Screenshot](frontend/assets/banner.png)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/PouliotAlexis/AlexIs)
+
+[**Voir la Démo en Plein Écran**](https://huggingface.co/spaces/PouliotAlexis/AlexIs)
 
 ## ✨ Fonctionnalités Clés
 
