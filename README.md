@@ -14,7 +14,7 @@ Une plateforme web intelligente qui utilise une architecture multi-agents pour o
 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/PouliotAlexis/AlexIs)
 
-[**Voir la Démo en Plein Écran**](https://poulioalexis-alexis.hf.space)
+[**Voir la Démo en Plein Écran**](https://pouliotalexis-alexis.hf.space/)
 
 ## ✨ Fonctionnalités Clés
 
