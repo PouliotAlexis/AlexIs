@@ -5,7 +5,7 @@ colorFrom: blue
 colorTo: indigo
 sdk: docker
 pinned: false
-pinned: false
+
 ---
 
 # 🧠 AI Générative Multi-Agents
