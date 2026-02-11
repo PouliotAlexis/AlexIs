@@ -12,7 +12,7 @@ pinned: false
 
 Une plateforme web intelligente qui utilise une architecture multi-agents pour optimiser vos interactions avec les Grands Modèles de Langage (LLMs). Le système sélectionne automatiquement le meilleur modèle pour votre tâche, sécurise vos données et améliore vos prompts.
 
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/PouliotAlexis/AlexIs)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/PouliotAlexis/AlexIs) ![Status](https://img.shields.io/badge/Status-Active-success) ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.109-green)
 
 [**Voir la Démo en Plein Écran**](https://pouliotalexis-alexis.hf.space/)
 
